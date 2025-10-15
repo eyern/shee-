@@ -21,7 +21,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['shee-production.up.railway.app','https://shee-production.up.railway.app/']
 
-CSRF_TRUSTED_ORIGINS = ['shee-production.up.railway.app','https://shee-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://shee-production.up.railway.app/']
 
 
 # Application definition

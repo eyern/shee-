@@ -1,0 +1,314 @@
+{% extends 'base.html' %}
+{% load static %}
+
+      {% block content %}
+
+      <!-- HERO SECTION-->
+      <div class="container">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({% static 'img/shee-home.jpg' %})">
+          <div class="container py-5">
+            <div class="row px-4 px-lg-5">
+              <div class="col-lg-6">
+                <p class="text-muted small text-uppercase mb-2">Find the best Gift Hampers for your loved one</p>
+                <h1 class="h2 text-uppercase mb-3">Welcome to Shee Gifts & Flowers</h1><a class="btn btn-dark" href="{% url 'store:all-categories' %}">Browse Categories</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- CATEGORIES SECTION-->
+        <section class="pt-5">
+          <header class="text-center">
+            <p class="small text-muted small text-uppercase mb-1">Put a smile on a loved one with our personalized gift hampers!</p>
+            <h2 class="h5 text-uppercase mb-4">Featured categories</h2>
+          </header>
+          <div class="row">
+          {% if categories %}
+            {% for category in categories %}
+
+              <div class="col-md-4 mb-4 mb-md-0">
+                <a class="category-item" href="{% url 'store:category-products' category.slug %}">
+                  {% if category.category_image %}
+                    <img class="img-fluid" src="{{ category.category_image.url }}" alt="{{ category.title }}">
+                    {% else %}
+                    <img class="img-fluid" src="{% static 'img/cat-img-1.jpg' %}" alt="{{ category.title }}">
+                  {% endif %}
+                  <strong class="category-item-title">{{ category.title }}</strong>
+                </a>
+              </div>
+            
+            {% endfor %}
+          {% endif %}
+          </div>
+        </section>
+
+
+        <!-- TRENDING PRODUCTS-->
+        <section class="py-5">
+          <header>
+            <p class="small text-muted small text-uppercase mb-1">checkout new arrivals</p>
+            <h2 class="h5 text-uppercase mb-4">What's New?</h2>
+          </header>
+          <div class="row">
+
+            {% if products %}
+              {% for product in products %}
+              
+                <!-- PRODUCT-->
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="product text-center">
+                    <div class="position-relative mb-3">
+
+                      <div class="badge text-white badge-"></div>
+                      
+                      <a class="d-block" href="{% url 'store:product-detail' product.slug %}">
+                        {% if product.product_image %}
+                          <img class="img-fluid w-100" src="{{ product.product_image.url }}" alt="{{product.title}}">
+                        {% else %}
+                          <img class="img-fluid w-100" src="{% static 'img/product-1.jpg' %}" alt="{{product.title}}">
+                        {% endif %}
+                      </a>
+
+                      <div class="product-overlay">
+                        <ul class="mb-0 list-inline">
+                          <li class="list-inline-item m-0 p-0">
+                            {% comment %} <a class="btn btn-sm btn-dark" href="{% url 'store:add-to-cart' %}">Add to cart</a> {% endcomment %}
+
+                            <form action="{% url 'store:add-to-cart' %}">
+                              <input type="hidden" name="prod_id" value="{{product.id}}" id="product_id">
+                              <button type="submit" class="btn btn-sm btn-dark">Add to Cart</button>
+                            </form>
+
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h6> <a class="reset-anchor" href="detail.html">{{ product.title }}</a></h6>
+                    <p class="small text-muted">KSh{{product.price}}</p>
+                  </div>
+                </div>
+
+              {% endfor %}
+            {% endif %}
+
+            
+
+          </div>
+        </section>
+
+
+        <section class="testimonials">
+          <div class="container">
+            <div class="row">
+              <div class="title text-center">
+                <h1>Our Clients Feedback - Review Us On Google!</h1>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="testimonials-content">
+                <div class="testimonials-box">
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>Highly recommend for anyone looking for thoughtful, high-quality personalized gifts!</p>
+                      <h6>Jane N</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>Absolutely thrilled with the quality of the puzzle and the customer service.</p>
+                      <h6>Mary</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>I ordered a gift hamper from Shee Gift last week, and I was amazed at how quickly it arrived</p>
+                      <h6>Eshther Karanja</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>I recently had the pleasure of shopping at Shee Gifts & Flowers, and I couldn't be more impressed! The customization process was incredibly easy... my gift turned out exactly as I envisioned, and the quality was exceptional.</p>
+                      <h6>Nduta</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>Lovely and unique items. The ladies who work there were very helpful and pleasant!</p>
+                      <h6>Joel</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="testimonials-img">
+                    <div class="test-img">
+                      <img class="rounded-circle" src="{% static 'img/rev-1.jpg' %}" alt="" width="50" height="50">
+                    </div>
+                    <div class="testimonials-text">
+                      <p>Easy order and efficient. Absolutely thrilled with my items. Good quality glass at an excellent price with stunning personalized engraving. Packed to perfection ❤️</p>
+                      <h6>George.</h6>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr>
+    
+    <a class="google-button" href="https://share.google/P5CEziETbOvjJE9mU" target="_blank">Click here to leave a <strong>google review</strong></a>
+    <br><br>    
+    <!-- SERVICES-->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <div class="d-inline-block">
+              <div class="media align-items-end">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+                <div class="media-body text-left ml-3">
+                  <h6 class="text-uppercase mb-1">Countrywide Shipping</h6>
+                  <p class="text-small mb-0 text-muted">We are pleased to be able to offer delivery services for all orders made on our platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <div class="d-inline-block">
+              <div class="media align-items-end">
+                <ion-icon name="call-outline"></ion-icon>
+                <div class="media-body text-left ml-3">
+                  <h6 class="text-uppercase mb-1">24/7 Support</h6>
+                  <p class="text-small mb-0 text-muted">Round-the-clock assistance for a smooth shopping experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-inline-block">
+              <div class="media align-items-end">
+                <ion-icon name="happy-outline"></ion-icon>
+                <div class="media-body text-left ml-3">
+                  <h6 class="text-uppercase mb-1">Shop with Confidence</h6>
+                  <p class="text-small mb-0 text-muted">Our Protection covers your purchase from click to delivery</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Testimonials Slider
+  
+      const sliderContainer = document.querySelector(".testimonials-box");
+      const slider = sliderContainer.children;
+      const containerWidth = sliderContainer.offsetWidth;
+  
+      const margin = 30;
+      let itemPerSlide = 0;
+      let sliderDot;
+  
+      const responsive = [{
+        breakPoint: {
+          width: 0,
+          item: 1,
+        },
+      },
+      {
+        breakPoint: {
+          width: 991,
+          item: 2,
+        },
+      },
+      ];
+  
+      function load() {
+        for (let i = 0; i < responsive.length; i++) {
+          if (window.innerWidth > responsive[i].breakPoint.width) {
+            itemPerSlide = responsive[i].breakPoint.item;
+          }
+        }
+        start();
+      }
+  
+      function start() {
+        totalWidth = 0;
+        for (let i = 0; i < slider.length; i++) {
+          slider[i].style.width = containerWidth / itemPerSlide - margin + "px";
+          slider[i].style.margin = margin / 2 + "px";
+          totalWidth += containerWidth / itemPerSlide;
+        }
+        sliderContainer.style.width = totalWidth + "px";
+  
+        sliderDot = Math.ceil(slider.length / itemPerSlide);
+  
+        for (let i = 0; i < sliderDot; i++) {
+          const div = document.createElement("div");
+          div.id = i;
+          div.setAttribute("onclick", "controlSlide(this)");
+          if (i == 0) {
+            div.classList.add("active");
+          }
+          document.querySelector(".slider").appendChild(div);
+        }
+      }
+  
+      let currentSlide = 0;
+      let autoSlide = 0;
+  
+      function controlSlide(element) {
+        clearInterval(timer);
+        timer = setInterval(autoPlay, 5000);
+        autoSlide = element.id;
+        currentSlide = element.id;
+        changeSlide(currentSlide);
+      }
+  
+      function changeSlide(currentSlide) {
+        controlButton = document.querySelector(".slider").children;
+        for (let i = 0; i < controlButton.length; i++) {
+          controlButton[i].classList.remove("active");
+        }
+        controlButton[currentSlide].classList.add("active");
+  
+        sliderContainer.style.marginLeft = -(containerWidth * currentSlide) + "px";
+      }
+  
+      function autoPlay() {
+        if (autoSlide == sliderDot - 1) {
+          autoSlide = 0;
+        } else {
+          autoSlide++;
+        }
+        changeSlide(autoSlide);
+      }
+      let timer = setInterval(autoPlay, 5000);
+  
+      window.onload = load();
+    </script>
+      </div>
+      
+
+      {% endblock content %}

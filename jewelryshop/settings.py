@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'store',
     'whitenoise.runserver_nostatic',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

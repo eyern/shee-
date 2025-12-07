@@ -11,7 +11,7 @@
     --pink: #e83e8c;
     --red: #dc3545;
     --orange: #fd7e14;
-    --yellow: #9E1C60;
+    --yellow: #317773;
     --green: #28a745;
     --teal: #20c997;
     --cyan: #17a2b8;
@@ -22,7 +22,7 @@
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;
-    --warning: #9E1C60;
+    --warning: #317773;
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
@@ -3063,37 +3063,37 @@ fieldset:disabled a.btn {
 
 .btn-warning {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-warning:hover {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-warning.focus,
 .btn-warning:focus {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60;
+    background-color: #317773;
+    border-color: #317773;
     box-shadow: 0 0 0 .2rem rgba(222, 170, 12, .5)
 }
 
 .btn-warning.disabled,
 .btn-warning:disabled {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-warning:not(:disabled):not(.disabled).active,
 .btn-warning:not(:disabled):not(.disabled):active,
 .show>.btn-warning.dropdown-toggle {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-warning:not(:disabled):not(.disabled).active:focus,
@@ -3370,14 +3370,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning {
-    color: #9E1C60;
-    border-color: #9E1C60
+    color: #317773;
+    border-color: #317773
 }
 
 .btn-outline-warning:hover {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-outline-warning.focus,
@@ -3387,7 +3387,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning.disabled,
 .btn-outline-warning:disabled {
-    color: #9E1C60;
+    color: #317773;
     background-color: transparent
 }
 
@@ -3395,8 +3395,8 @@ fieldset:disabled a.btn {
 .btn-outline-warning:not(:disabled):not(.disabled):active,
 .show>.btn-outline-warning.dropdown-toggle {
     color: #212529;
-    background-color: #9E1C60;
-    border-color: #9E1C60
+    background-color: #317773;
+    border-color: #317773
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
@@ -5710,13 +5710,13 @@ a.badge-info:focus {
 
 .badge-warning {
     color: #212529;
-    background-color: #9E1C60
+    background-color: #317773
 }
 
 a.badge-warning:focus,
 a.badge-warning:hover {
     color: #212529;
-    background-color: #9E1C60
+    background-color: #317773
 }
 
 a.badge-warning.focus,
@@ -7347,14 +7347,14 @@ button.bg-info:hover {
 }
 
 .bg-warning {
-    background-color: #9E1C60 !important
+    background-color: #317773 !important
 }
 
 a.bg-warning:focus,
 a.bg-warning:hover,
 button.bg-warning:focus,
 button.bg-warning:hover {
-    background-color: #9E1C60 !important
+    background-color: #317773 !important
 }
 
 .bg-danger {
@@ -7455,7 +7455,7 @@ button.bg-dark:hover {
 }
 
 .border-warning {
-    border-color: #9E1C60 !important
+    border-color: #317773 !important
 }
 
 .border-danger {
@@ -11234,7 +11234,7 @@ a.text-info:hover {
 }
 
 .text-warning {
-    color: #9E1C60 !important
+    color: #317773 !important
 }
 
 a.text-warning:focus,

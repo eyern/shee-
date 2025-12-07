@@ -582,7 +582,7 @@ a.text-hover-info:focus, a.text-hover-info:hover {
 }
 
 .text-hover-warning:focus, .text-hover-warning:hover {
-  color: #9E1C60 !important;
+  color: #317773 !important;
 }
 
 a.text-hover-warning {
@@ -590,7 +590,7 @@ a.text-hover-warning {
 }
 
 a.text-hover-warning:focus, a.text-hover-warning:hover {
-  color: #9E1C60 !important;
+  color: #317773 !important;
 }
 
 .bg-warning-light {
@@ -598,7 +598,7 @@ a.text-hover-warning:focus, a.text-hover-warning:hover {
 }
 
 .border-warning {
-  border-color: #9E1C60 !important;
+  border-color: #317773 !important;
 }
 
 .text-hover-danger {
@@ -766,7 +766,7 @@ a.text-hover-dark:focus, a.text-hover-dark:hover {
 }
 
 .badge-warning-light {
-  color: #9E1C60;
+  color: #317773;
   background-color: #fff8e1;
 }
 
@@ -1767,14 +1767,14 @@ STYLE SWITCHER FOR DEMO
 
 .btn-warning {
   color: #212529;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-warning:focus, .btn-warning.focus {
@@ -1784,15 +1784,15 @@ STYLE SWITCHER FOR DEMO
 
 .btn-warning.disabled, .btn-warning:disabled {
   color: #212529;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
 .show > .btn-warning.dropdown-toggle {
   color: #212529;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,
@@ -2086,16 +2086,16 @@ STYLE SWITCHER FOR DEMO
 }
 
 .btn-outline-warning {
-  color: #9E1C60;
+  color: #317773;
   background-color: transparent;
   background-image: none;
-  border-color: #9E1C60;
+  border-color: #317773;
 }
 
 .btn-outline-warning:hover {
   color: #fff;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-outline-warning:focus, .btn-outline-warning.focus {
@@ -2104,15 +2104,15 @@ STYLE SWITCHER FOR DEMO
 }
 
 .btn-outline-warning.disabled, .btn-outline-warning:disabled {
-  color: #9E1C60;
+  color: #317773;
   background-color: transparent;
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
 .show > .btn-outline-warning.dropdown-toggle {
   color: #212529;
-  background-color: #9E1C60;
-  border-color: #9E1C60;
+  background-color: #317773;
+  border-color: #317773;
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
@@ -2122,7 +2122,7 @@ STYLE SWITCHER FOR DEMO
 
 .btn-outline-warning:focus {
   color: #fff;
-  background: #9E1C60;
+  background: #317773;
   text-decoration: none;
 }
 
@@ -2530,13 +2530,13 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-  background-color: #9E1C60 !important;
+  background-color: #317773 !important;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
-  background-color: #9E1C60 !important;
+  background-color: #317773 !important;
 }
 
 .bg-danger {
@@ -2586,7 +2586,7 @@ button.bg-dark:focus {
 }
 
 .border-warning {
-  border-color: #9E1C60 !important;
+  border-color: #317773 !important;
 }
 
 .border-danger {
@@ -2634,11 +2634,11 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: #9E1C60 !important;
+  color: #317773 !important;
 }
 
 a.text-warning:hover, a.text-warning:focus {
-  color: #9E1C60 !important;
+  color: #317773 !important;
 }
 
 .text-danger {
@@ -2731,7 +2731,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .badge-warning {
   color: #212529;
-  background-color: #9E1C60;
+  background-color: #317773;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 0;
@@ -2742,7 +2742,7 @@ a.text-dark:hover, a.text-dark:focus {
 .badge-warning[href]:hover, .badge-warning[href]:focus {
   color: #212529;
   text-decoration: none;
-  background-color: #9E1C60;
+  background-color: #317773;
 }
 
 .badge-danger {
